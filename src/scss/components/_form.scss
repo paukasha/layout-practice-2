@@ -1,0 +1,101 @@
+.form-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  display: none;
+  width: 100%;
+  height: 100vw;
+  background-color: rgba(229, 229, 229, 0.5);
+}
+
+.form {
+  position: relative;
+  margin: 100px auto;
+  border: 1px solid var(--color-silver);
+  padding: 72px 20px;
+  max-width: 356px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-color: var(--color-white);
+
+  .cross {
+    position: absolute;
+    right: 26px;
+    top: 36px;
+    outline: none;
+    border: none;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../img/sprite.svg#cross");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  input::placeholder {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-silver);
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-pacific-blue);
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &__name,
+  &__tel,
+  &__time {
+    margin-bottom: 15px;
+    border: 1px solid var(--color-mercury);
+    padding: 10px;
+    width: 100%;
+  }
+
+  &__comment {
+    margin-bottom: 10px;
+    border: 1px solid var(--color-mercury);
+    padding: 10px;
+    width: 100%;
+    height: 79px;
+    font-size: 14px;
+    color: var(--color-mercury);
+    resize: none;
+  }
+
+  textarea::placeholder {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-silver);
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: 135px;
+    height: 40px;
+    font-size: 14px;
+    color: var(--color-white);
+    background-color: var(--color-pacific-blue);
+  }
+
+  @include mobile {
+    max-width: 300px;
+  }
+}
+
+.checkbox {
+  @include checkbox;
+}
+
+.open-form {
+  display: block;
+}

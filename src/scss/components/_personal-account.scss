@@ -1,0 +1,84 @@
+.personal-account {
+  padding: 0;
+  padding-bottom: 37px;
+
+  &__title {
+    margin: 0;
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .signin {
+    padding: 0;
+    padding-bottom: 38px;
+
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &__mail,
+    &__password {
+      margin-bottom: 12px;
+      outline: none;
+      border: 1px solid var(--color-silver);
+      width: 265px;
+      height: 42px;
+      max-width: 100%;
+
+      &::placeholder {
+        padding: 0 10px;
+        font-size: 14px;
+        color: var(--color-silver);
+      }
+    }
+
+    &-btn {
+      width: 82px;
+      height: 39px;
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    &__login {
+      padding: 0 17px;
+      line-height: 21px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        color: var(--color-pacific-blue);
+      }
+    }
+  }
+
+  .account {
+    padding: 0;
+
+    &__name {
+      margin-bottom: 6px;
+    }
+
+    &__tel {
+      font-size: 14px;
+    }
+
+    &__menu {
+      margin: 0;
+      padding: 25px 0;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__link {
+      color: var(--color-pacific-blue);
+    }
+  }
+}

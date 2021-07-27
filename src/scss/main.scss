@@ -1,0 +1,47 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "vendor";
+@import "components/header";
+@import "components/nav";
+@import "components/slider";
+@import "components/content-left";
+@import "components/content-right";
+@import "components/personal-account";
+@import "components/footer";
+@import "components/form";
+@import "components/cart";
+
+.all-btn {
+  border: 2px solid transparent;
+  border-radius: 2px;
+  width: 100%;
+  font-size: 14px;
+  color: var(--color-white);
+  background-color: var(--color-pacific-blue);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+  &:hover {
+    border: 2px solid var(--color-pacific-blue);
+    color: var(--color-pacific-blue);
+    background-color: var(--color-white);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+}
+
+.container-narrow {
+  display: flex;
+}
+
+.catalog {
+  margin-bottom: 58px;
+
+  @include mobile {
+    margin-bottom: 36px;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden
+}

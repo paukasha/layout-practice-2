@@ -1,0 +1,324 @@
+.header {
+  font-size: 12px;
+
+  &__top {
+    padding: 4px 0;
+    background-color: var(--color-seashell);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
+  &-top {
+    align-items: center;
+    max-width: 538px;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 248px;
+  }
+
+  &__link {
+    color: var(--color-corduroy);
+    transition: color 0.3s ease-in, text-decoration 0.3s ease-in;
+
+    &:hover {
+      font-weight: 700;
+      text-decoration: underline;
+      transition: color 0.3s ease-in, text-decoration 0.3s ease-in;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    padding: 0 32px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      display: block;
+      width: 1px;
+      height: 14px;
+      color: var(--color-corduroy);
+      background-color: var(--color-silver);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 3px;
+      display: block;
+      width: 1px;
+      height: 14px;
+      background-color: var(--color-silver);
+    }
+
+    &-favourite {
+      margin-right: 13px;
+    }
+
+    svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  }
+
+  &-btn__signin {
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    color: var(--color-pacific-blue);
+    background-color: transparent;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-pacific-blue);
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+  }
+
+  &__bottom {
+    padding-top: 27px;
+    padding-bottom: 13px;
+
+    @include mobile {
+      padding: 12px 0;
+    }
+  }
+
+  &__logo {
+    padding-left: 7px;
+    font-size: 24px;
+    line-height: 30px;
+
+    &-name {
+      display: block;
+
+      @include tablet {
+        padding-left: 0;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-comp {
+      &::after {
+        content: "Компании";
+        display: block;
+        padding-left: 38px;
+        color: var(--color-pacific-blue);
+
+        @include mobile {
+          content: "Логотип";
+          padding: 0;
+          font-size: 16px;
+        }
+      }
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 18px;
+      color: var(--color-corduroy);
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        padding-right: 26px;
+      }
+    }
+
+    .tel {
+      position: relative;
+      white-space: nowrap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -34px;
+        top: 0;
+        padding-left: 30px;
+        width: 22px;
+        height: 22px;
+        background-image: url("../../img/sprite.svg#telephone");
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+
+        @include tablet {
+          left: -25px;
+          top: 0;
+          width: 16px;
+          height: 16px;
+          background-size: 16px 16px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      @include mobile {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-btn {
+    width: 150px;
+    height: 28px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    max-width: 33%;
+    font-size: 14px;
+
+    &-address {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 10px;
+      padding-left: 9px;
+      line-height: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -27px;
+        top: -3px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../../img/sprite.svg#location");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &-mail {
+      position: relative;
+      padding-left: 9px;
+      font-size: 14px;
+      color: var(--color-corduroy);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -22px;
+        top: -3px;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../img/sprite.svg#mailsvg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../img/sprite.svg#cart");
+      background-repeat: no-repeat;
+
+      @include md {
+        left: -6px;
+        top: -2px;
+        width: 20px;
+      }
+
+      @include mobile {
+        top: -8px;
+      }
+    }
+
+    span {
+      display: block;
+      margin-bottom: 5px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--quantity {
+      position: absolute;
+      left: 0;
+      top: -17px;
+      display: none;
+      border-radius: 20px;
+      padding: 4px;
+      width: 25px;
+      height: 18px;
+      font-size: 10px;
+      text-align: center;
+      color: var(--color-white);
+      background-color: var(--color-corduroy);
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  @include burger;
+  @include mobile {
+    display: block;
+  }
+}

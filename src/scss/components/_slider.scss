@@ -1,0 +1,113 @@
+.slider-section {
+  margin-bottom: 37px;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.container-slider {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1240px;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.banner-slider {
+  position: relative;
+  overflow: hidden;
+  height: 391px;
+
+  .swiper-slide {
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    height: 200px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 2px;
+  width: 38px;
+  height: 38px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-pacific-blue);
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 158, 197, 0.7);
+    transition: background-color 0.3s ease-out;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+  background-image: url("../../img/arrow-prev.png");
+}
+
+.swiper-button-next {
+  right: 0;
+  background-image: url("../../img/arrow-next.png");
+}
+
+.swiper-pagination {
+  @include desktop {
+    display: none;
+  }
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 21px;
+
+  @include mobile {
+    padding-bottom: 8px;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 7px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  position: absolute;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-corduroy);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-pacific-blue);
+}

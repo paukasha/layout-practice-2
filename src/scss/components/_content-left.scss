@@ -1,0 +1,244 @@
+.content-left {
+  max-width: 30%;
+
+  .search {
+    position: relative;
+    margin-bottom: 33px;
+    width: 100%;
+
+    input {
+      outline: none;
+      border: 1px solid var(--color-silver);
+      padding: 10px;
+      width: 265px;
+      max-width: 100%;
+    }
+
+    input::placeholder {
+      font-size: 14px;
+      color: var(--color-silver);
+    }
+
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    svg {
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      width: 22px;
+      height: 20px;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include md {
+    display: none;
+  }
+}
+
+.filters {
+  padding: 0 0 36px;
+
+  &__title {
+    margin: 0 0 32px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__list {
+    margin: 0;
+    border-bottom: 1px solid var(--color-silver);
+    padding: 0 0 20px;
+  }
+
+  &__item {
+    padding: 10px 36px;
+    color: var(--color-pacific-blue);
+    cursor: pointer;
+  }
+
+  &__bottom {
+    border-bottom: 1px solid var(--color-silver);
+    padding: 19px 0;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    span {
+      padding-left: 6px;
+      color: var(--color-pacific-blue);
+    }
+
+    span > span {
+      color: var(--color-silver);
+    }
+
+    &-choose:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.news {
+  padding: 0 0 47px;
+
+  &__title {
+    margin: 0 0 23px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__img {
+    display: block;
+    height: 94px;
+    min-width: 92px;
+    background-color: var(--color-silver);
+    object-fit: cover;
+
+    @include mobile {
+      height: 60px;
+      min-width: 59px;
+    }
+  }
+
+  &__text {
+    padding: 0 11px;
+
+    span {
+      display: block;
+    }
+
+    &-date {
+      font-size: 14px;
+      color: var(--color-silver);
+    }
+
+    &-descr {
+      font-size: 16px;
+      line-height: 25px;
+      color: var(--color-pacific-blue);
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-all__link {
+    display: block;
+    font-size: 16px;
+    text-align: right;
+    color: var(--color-pacific-blue);
+  }
+}
+
+.aside-banner > .novelty-catalog__list > .novelty-catalog__item {
+  margin: 0;
+  width: 100%;
+}
+
+.accordion {
+  margin-bottom: 10px;
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    color: var(--color-pacific-blue);
+    background-color: transparent;
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+  }
+
+  &__list {
+    display: none;
+  }
+}
+
+.accordion__icon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+
+  &-left {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    display: block;
+    border-radius: 2px;
+    width: 6px;
+    height: 2px;
+    background-color: transparent;
+    transform: rotate(35deg);
+
+    &::after {
+      content: "";
+      z-index: -1;
+      display: block;
+      float: right;
+      width: 6px;
+      height: 2px;
+      background-color: var(--color-pacific-blue);
+      transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+    }
+  }
+
+  &-right {
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    display: block;
+    border-radius: 2px;
+    width: 6px;
+    height: 2px;
+    background-color: transparent;
+    transform: rotate(-35deg);
+
+    &::after {
+      content: "";
+      z-index: -1;
+      display: block;
+      float: right;
+      width: 6px;
+      height: 2px;
+      background-color: var(--color-pacific-blue);
+      transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+    }
+  }
+}
+
+.open .accordion__list {
+  display: block;
+}
+
+.open .accordion__icon-left::after {
+  transform: rotate(-70deg);
+  transform-origin: center center;
+}
+
+.open .accordion__icon-right::after {
+  transform: rotate(70deg);
+  transform-origin: center center;
+}

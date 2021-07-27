@@ -1,0 +1,126 @@
+<div class="content-left">
+  <div class="search">
+    <input type="text" placeholder="Поиск">
+    <svg>
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+  </div>
+  <div class="filters">
+    <h2 class="filters__title">Каталог</h2>
+    <ul class="filters__list">
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="false">
+          <span class="accordion__title">Кофемашины текст в две строки</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Кофемашина №1</li>
+          <li class="filters__item">Кофемашина №2</li>
+          <li class="filters__item">Кофемашина №3</li>
+        </ul>
+      </li>
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="true">
+          <span class="accordion__title">Кофе</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Молотый текст в две строки</li>
+          <li class="filters__item">Зерновой</li>
+        </ul>
+      </li>
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="false">
+          <span class="accordion__title">Аксессуары</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Турка</li>
+        </ul>
+      </li>
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="false">
+          <span class="accordion__title">Подарочные наборы</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Для него</li>
+          <li class="filters__item">Для неё</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="filters__bottom">
+      <div class="filters__bottom-choose">
+        <svg>
+          <use xlink:href="img/sprite.svg#favourite"></use>
+        </svg>
+        <span>Избранное<span>(2)</span></span>
+      </div>
+      <div class="filters__bottom-choose">
+        <svg>
+          <use xlink:href="img/sprite.svg#compare"></use>
+        </svg>
+        <span>Список сравнения<span>(2)</span></span>
+      </div>
+    </div>
+  </div>
+  @include('personal-account.html')
+  <article class="news">
+    <h2 class="news__title">Новости</h2>
+    <ul class="news__list">
+      <li class="news__item">
+        <a href="#" class="news__link">
+          <img src="../img/coffe-machine.jpg" alt="news photo" class="news__img">
+          <div class="news__text">
+            <span class="news__text-date">21 Августа 2015</span>
+            <span class="news__text-descr">Новые кофемашины в нашем каталоге</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="news-all__link">Все новости</a>
+  </article>
+
+  <aside class="aside-banner">
+    <ul class="novelty-catalog__list">
+      <li class="novelty-catalog__item product">
+        <div class="product__code">
+          <span class="product__id">Код: 41256</span>
+          <svg>
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+        </div>
+        <img src="../img/coffee-2.jpg" alt="cap">
+        <h3 class="product__title">" БАБОЧКА- 2 " ЧЁРНАЯ телевизионная антенна комнатная цифровая DVB-T2 с
+          зигзагом </h3>
+        <span class="product__oldprice">550 </span>
+        <span class="product__price">9 999 999 </span>
+        <span class="product__quantity">Количество:</span>
+        <div class="product__stepper">
+          <div class="stepper">
+            <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled">
+            </button>
+            <input type="text" class="stepper__input" value="1" maxlength="5">
+            <button class="btn-reset stepper__btn stepper__btn--plus">
+            </button>
+          </div>
+          <button class="btn-reset all-btn product-incart-btn">В корзину</button>
+        </div>
+        <button class="btn-reset product-buy-btn">Купить в 1 клик</button>
+      </li>
+    </ul>
+  </aside>
+</div>
+

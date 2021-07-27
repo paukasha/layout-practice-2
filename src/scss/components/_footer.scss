@@ -1,0 +1,233 @@
+.footer {
+  position: relative;
+  background-color: var(--color-corduroy);
+
+  .container {
+    @include mobile {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
+
+    @include mobile {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    max-width: 347px;
+
+    @include md {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      padding: 0 20px 0 34px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    padding-right: 53px;
+
+    @include mobile {
+      position: absolute;
+      left: 20px;
+      bottom: 36px;
+      flex-direction: column;
+    }
+  }
+
+  &-btn {
+    display: block;
+    width: 108px;
+    height: 35px;
+    background-color: var(--color-silver);
+
+    &:not(:last-child) {
+      margin-right: 12px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__create-site {
+    @include mobile {
+      order: 2;
+    }
+  }
+
+  &__contact {
+    padding-top: 41px;
+    padding-left: 30px;
+    width: 375px;
+    max-width: 100%;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 19px;
+      padding-top: 15px;
+      padding-left: 58px;
+    }
+  }
+
+  .contact {
+    &__link {
+      position: relative;
+      display: block;
+      margin-bottom: 11px;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--color-white);
+
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__tel {
+      font-size: 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -32px;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../img/phone.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include mobile {
+          left: -25px;
+          top: 4px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    &__address {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -29px;
+        top: 3px;
+        width: 16px;
+        height: 22px;
+        background-image: url("../../img/location.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include mobile {
+          left: -25px;
+          order: 2;
+          width: 12px;
+          height: 16px;
+        }
+      }
+    }
+
+    &__mail {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -29px;
+        top: 2px;
+        width: 20px;
+        height: 16px;
+        background-image: url("../../img/mail.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include mobile {
+          left: -25px;
+          width: 15px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    display: flex;
+    padding: 0 10px;
+    height: 439px;
+
+    .nav {
+      position: relative;
+      display: block;
+      border: none;
+      background-color: transparent;
+
+      &__social {
+        display: none;
+      }
+
+      &__icons {
+        display: none;
+      }
+
+      &__contacts {
+        display: none;
+      }
+
+      .cross {
+        display: none;
+      }
+
+      &__list {
+        padding: 25px 15px;
+      }
+
+      &__item {
+        padding: 0 3px;
+        font-size: 16px;
+        line-height: 29px;
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+.social {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 13px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: var(--color-pacific-blue);
+  }
+
+  &__link {
+    svg {
+      display: block;
+      width: 15px;
+      height: 15px;
+      fill: var(--color-corduroy);
+    }
+  }
+}

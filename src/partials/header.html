@@ -1,0 +1,50 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__container header-top">
+        <ul class="header__list">
+          <li class="header__item"><a href="#" class="header__link">Доставка</a></li>
+          <li class="header__item"><a href="#" class="header__link">Оплата</a></li>
+          <li class="header__item"><a href="#" class="header__link">Возврат</a></li>
+          <li class="header__item"><a href="#" class="header__link">Контракты</a></li>
+        </ul>
+        <div class="header__icon">
+          <svg class="header__icon-favourite">
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+          <svg class="header__icon-compare">
+            <use xlink:href="img/sprite.svg#compare"></use>
+          </svg>
+        </div>
+        <button class="btn-reset header-btn__signin">Вход / Регистрация</button>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container header__container ">
+      <div class="header__logo">
+        <span class="header__logo-name">Название</span>
+        <span class="header__logo-comp"></span>
+      </div>
+      <div class="header__tel">
+        <a href="tel:+74959876543" class="tel">+7 (495) 987-65-43</a>
+        <button class="btn-reset all-btn header-btn call-btn">Заказать звонок</button>
+      </div>
+      <div class="header__contacts">
+          <span class="header__contacts-address">г. Москва, пл. Красная, д.1 г. Москва, пл. Красная, д.1
+            <a href="#" class="header-contacts__link">(показать на карте)</a> </span>
+        <a href="mailto:mail@zasaitami.ru" class="header__contacts-mail">mail@zasaitami.ru</a>
+      </div>
+      <div class="header__cart">
+        <span class="header__cart-quantity">0 товаров,</span>
+        <span class="header__cart-sum">на сумму 9 999 999 руб.</span>
+        <button class="btn-reset all-btn header-btn">Оформить заказ</button>
+        <div class="header__cart--quantity">0</div>
+        @include('cart.html')
+      </div>
+      <button class="burger">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
