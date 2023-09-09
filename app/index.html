@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>New site</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__container header-top">
+        <ul class="header__list">
+          <li class="header__item"><a href="#" class="header__link">Доставка</a></li>
+          <li class="header__item"><a href="#" class="header__link">Оплата</a></li>
+          <li class="header__item"><a href="#" class="header__link">Возврат</a></li>
+          <li class="header__item"><a href="#" class="header__link">Контракты</a></li>
+        </ul>
+        <div class="header__icon">
+          <svg class="header__icon-favourite">
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+          <svg class="header__icon-compare">
+            <use xlink:href="img/sprite.svg#compare"></use>
+          </svg>
+        </div>
+        <button class="btn-reset header-btn__signin">Вход / Регистрация</button>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container header__container ">
+      <div class="header__logo">
+        <span class="header__logo-name">Название</span>
+        <span class="header__logo-comp"></span>
+      </div>
+      <div class="header__tel">
+        <a href="tel:+74959876543" class="tel">+7 495 987-65-43</a>
+        <button class="btn-reset all-btn header-btn call-btn">Заказать звонок</button>
+      </div>
+      <div class="header__contacts">
+          <span class="header__contacts-address">г. Москва,
+          </span>
+        <br>
+        <a href="mailto:mail@zasaitami.ru" class="header__contacts-mail">mail@zasaitami.ru</a>
+      </div>
+      <div class="header__cart">
+        <span class="header__cart-quantity">0 товаров,</span>
+        <span class="header__cart-sum">на сумму 1 500 руб.</span>
+        <button class="btn-reset all-btn header-btn">Оформить заказ</button>
+        <div class="header__cart--quantity">0</div>
+        <div class="cart cart-container cart-hidden">
+  <ul class="cart__list">
+
+  </ul>
+  <div class="cart__sum">
+    <span class="cart__sum-text">Итого: </span>
+  </div>
+</div>
+      </div>
+      <button class="burger">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <nav class="nav">
+  <div class="container">
+    <button class="cross"></button>
+    <div class="nav__icons">
+      <svg>
+        <use xlink:href="img/sprite.svg#account"></use>
+      </svg>
+      <svg>
+        <use xlink:href="img/sprite.svg#favourite"></use>
+      </svg>
+      <svg>
+        <use xlink:href="img/sprite.svg#compare"></use>
+      </svg>
+      <svg>
+        <use xlink:href="img/sprite.svg#search"></use>
+      </svg>
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item">Главная</li>
+      <li class="nav__item">О компании</li>
+      <li class="nav__item">Услуги</li>
+      <li class="nav__item">Каталог</li>
+      <li class="nav__item">Новости</li>
+      <li class="nav__item">Фотогалерея</li>
+      <li class="nav__item">Вопрос-ответ</li>
+      <li class="nav__item">Контакты</li>
+    </ul>
+    <div class="nav__contacts">
+        <a href="tel:+74959876543" class="nav__contacts-link">+7 495 987-65-43</a>
+        <button class="btn-reset nav__contacts-btn">Заказать звонок</button>
+        <span class="nav__contacts-address">г. Москва, </span>
+      <br>
+        <a href="mailto:mail@zasaitami.ru" class="nav__contacts-mail">test@mail.ru</a>
+    </div>
+
+    <ul class="nav__social social">
+      <li class="social__item social-telegram"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#telegram"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-ok"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-vk"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#vk"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-insta"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#insta"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-youtube"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#youtube"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-whatsapp"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#whatsapp"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-tiktok"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#tik-tok"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-twitter"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#twitter"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-fb"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#facebook"></use>
+        </svg>
+      </a></li>
+    </ul>
+  </div>
+</nav>
+
+    <section class="slider-section">
+  <h2 class="visually-hidden">Slider</h2>
+  <div class="container-slider">
+    <div class="banner-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../img/slide-1.jpg" alt="slide photo">
+        </div>
+        <div class="swiper-slide">
+          <img src="../img/slide-2.jpg" alt="slide photo">
+        </div>
+        <div class="swiper-slide">
+          <img src="../img/slide-3.jpg" alt="slide photo">
+        </div>
+      </div>
+      <div class="swiper-pagination banner-pag">
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+    <main class="main">
+      <section class="catalog">
+        <h2 class="visually-hidden">Catalog</h2>
+        <div class="container container-narrow">
+          <div class="content-left">
+  <div class="search">
+    <input type="text" placeholder="Поиск">
+    <svg>
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+  </div>
+  <div class="filters">
+    <h2 class="filters__title">Каталог</h2>
+    <ul class="filters__list">
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="false">
+          <span class="accordion__title">Кофемашины текст в две строки</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Кофемашина № 1</li>
+          <li class="filters__item">Кофемашина № 2</li>
+          <li class="filters__item">Кофемашина № 3</li>
+        </ul>
+      </li>
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="true">
+          <span class="accordion__title">Кофе</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Молотый текст в две строки</li>
+          <li class="filters__item">Зерновой</li>
+        </ul>
+      </li>
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="false">
+          <span class="accordion__title">Аксессуары</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Турка</li>
+        </ul>
+      </li>
+      <li class="accordion">
+        <button class="accordion__control" aria-expanded="false">
+          <span class="accordion__title">Подарочные наборы</span>
+          <span class="accordion__icon">
+            <span class="accordion__icon-left"></span>
+            <span class="accordion__icon-right"></span>
+          </span>
+        </button>
+        <ul class="accordion__list" aria-hidden="true">
+          <li class="filters__item">Для него</li>
+          <li class="filters__item">Для неё</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="filters__bottom">
+      <div class="filters__bottom-choose">
+        <svg>
+          <use xlink:href="img/sprite.svg#favourite"></use>
+        </svg>
+        <span>Избранное<span>(2)</span></span>
+      </div>
+      <div class="filters__bottom-choose">
+        <svg>
+          <use xlink:href="img/sprite.svg#compare"></use>
+        </svg>
+        <span>Список сравнения<span>(2)</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="personal-account">
+  <div class="signin">
+    <h2 class="personal-account__title">Личный кабинет</h2>
+    <input type="text" placeholder="Email" class="signin__mail">
+    <input type="text" placeholder="Пароль" class="signin__password">
+    <div class="signin__buttons">
+      <button class="btn-reset all-btn signin-btn">Войти</button>
+      <div class="signin__login">
+        <span class="forgot-password">Забыли пароль?</span>
+        <span class="login">Регистрация</span>
+      </div>
+    </div>
+  </div>
+  <div class="account">
+    <h2 class="personal-account__title">Личный кабинет</h2>
+    <div class="personal-data">
+      <div class="account__name">Дмитрий Олегович</div>
+      <div class="account__tel">+7 999 803-97-56</div>
+    </div>
+    <ul class="account__menu">
+      <li class="account__item"><a href="#" class="account__link">Личные данные</a></li>
+      <li class="account__item"><a href="#" class="account__link">Мои заказы</a></li>
+      <li class="account__item"><a href="#" class="account__link">Агентские заказы</a></li>
+    </ul>
+    <button class="btn-reset all-btn signin-btn">Выйти</button>
+  </div>
+</div>
+  <article class="news">
+    <h2 class="news__title">Новости</h2>
+    <ul class="news__list">
+      <li class="news__item">
+        <a href="#" class="news__link">
+          <img src="../img/coffe-machine.jpg" alt="news photo" class="news__img">
+          <div class="news__text">
+            <span class="news__text-date">21 Августа 2015</span>
+            <span class="news__text-descr">Новые кофемашины в нашем каталоге</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="news-all__link">Все новости</a>
+  </article>
+
+  <aside class="aside-banner">
+    <ul class="novelty-catalog__list">
+      <li class="novelty-catalog__item product">
+        <div class="product__code">
+          <span class="product__id">Код: 41256</span>
+          <svg>
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+        </div>
+        <img src="../img/coffee-2.jpg" alt="cap">
+        <h3 class="product__title">» БАБОЧКА- 2 " ЧЁРНАЯ телевизионная антенна комнатная цифровая DVB-T2 с
+          зигзагом </h3>
+        <span class="product__oldprice">550 </span>
+        <span class="product__price">1 500 </span>
+        <span class="product__quantity">Количество:</span>
+        <div class="product__stepper">
+          <div class="stepper">
+            <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled">
+            </button>
+            <input type="text" class="stepper__input" value="1" maxlength="5">
+            <button class="btn-reset stepper__btn stepper__btn--plus">
+            </button>
+          </div>
+          <button class="btn-reset all-btn product-incart-btn">В корзину</button>
+        </div>
+        <button class="btn-reset product-buy-btn">Купить в 1 клик</button>
+      </li>
+    </ul>
+  </aside>
+</div>
+
+          <div class="content-right">
+  <div class="wellcome">
+    <h2 class="wellcome__title">Добро пожаловать!</h2>
+    <div class="wellcome__info">
+      <img src="../img/coffee-1.jpg" alt="coffee" class="wellcome__info-img">
+      <div class="wellcome__info-text">
+        <p class="wellcome__info-paragraph">Это демонстрационный сайт.</p>
+        <p class="wellcome__info-paragraph">Все содержимое не актуальное и размещено исключительно для примера.</p>
+        <p class="wellcome__info-paragraph">До XIV века кофе произрастал в Эфиопии в диком виде. После кофейное
+          дерево было привезено на Аравийский полуостров. В XVI веке широко распространяться стал в Османской
+          империи. До XIV века кофе произрастал в Эфиопии в диком виде. После кофейное
+          дерево было привезено на Аравийский полуостров. В XVI веке широко распространяться стал в Османской
+          империи.</p>
+      </div>
+    </div>
+    <p class="wellcome__paragraph">В конце XVI века европейские торговцы начали закупать кофе в арабских портах
+      и привозить в Европу в 1600-е гг.
+      Согласно легенде, в середине XVII века мусульманский пилигрим тайно вывез кофейные зёрна в Южную Индию.
+      Оттуда в конце XVII века голландские торговцы тайно вывезли кофейное дерево на Яву и Суматру.</p>
+  </div>
+
+  <div class="novelty">
+    <h2 class="novelty__title">Новинки</h2>
+    <ul class="novelty-catalog__list">
+      <li class="novelty-catalog__item product">
+        <div class="product__code">
+          <span class="product__id">Код: 41256</span>
+          <svg>
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+        </div>
+        <img src="../img/coffee-4.jpg" alt="cap" class="product__img">
+        <h3 class="product__title">» БАБОЧКА- 2 " ЧЁРНАЯ телевизионная антенна комнатная цифровая DVB-T2 с
+          зигзагом </h3>
+        <span class="product__oldprice">550 </span>
+        <span class="product__price">1 500 </span>
+        <span class="product__quantity">Количество:</span>
+        <div class="product__stepper">
+          <div class="stepper">
+            <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled">
+            </button>
+            <input type="text" class="stepper__input" value="1" maxlength="5">
+            <button class="btn-reset stepper__btn stepper__btn--plus">
+            </button>
+          </div>
+          <button class="btn-reset all-btn product-incart-btn">В корзину</button>
+        </div>
+        <button class="btn-reset product-buy-btn">Купить в 1 клик</button>
+      </li>
+      <li class="novelty-catalog__item product">
+        <div class="product__code">
+          <span class="product__id">Код: 45674</span>
+          <svg>
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+        </div>
+        <img src="../img/coffee-2.jpg" alt="cap" class="product__img">
+        <h3 class="product__title">» БАБОЧКА- 2 " ЧЁРНАЯ телевизионная антенна комнатная цифровая DVB-T2 с
+          зигзагом </h3>
+        <span class="product__oldprice">550 </span>
+        <span class="product__price">383 </span>
+        <span class="product__quantity">Количество:</span>
+        <div class="product__stepper">
+          <div class="stepper">
+            <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled">
+            </button>
+            <input type="text" class="stepper__input" value="1" maxlength="5">
+            <button class="btn-reset stepper__btn stepper__btn--plus">
+            </button>
+          </div>
+          <button class="btn-reset all-btn product-incart-btn">В корзину</button>
+        </div>
+        <button class="btn-reset product-buy-btn">Купить в 1 клик</button>
+      </li>
+      <li class="novelty-catalog__item product">
+        <div class="product__code">
+          <span class="product__id">Код: 47854</span>
+          <svg>
+            <use xlink:href="img/sprite.svg#favourite"></use>
+          </svg>
+        </div>
+        <img src="../img/coffee-3.jpg" alt="cap" class="product__img">
+        <h3 class="product__title">» БАБОЧКА- 2 " ЧЁРНАЯ телевизионная антенна комнатная цифровая DVB-T2 с
+          зигзагом </h3>
+        <span class="product__oldprice">550</span>
+        <span class="product__price">9 454</span>
+        <span class="product__quantity">Количество:</span>
+        <div class="product__stepper">
+          <div class="stepper">
+            <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled">
+            </button>
+            <input type="text" class="stepper__input" value="1" maxlength="5">
+            <button class="btn-reset stepper__btn stepper__btn--plus">
+            </button>
+          </div>
+          <button class="btn-reset all-btn product-incart-btn">В корзину</button>
+        </div>
+        <button class="btn-reset product-buy-btn">Купить в 1 клик</button>
+      </li>
+    </ul>
+    <a href="#" class="novelty__all-link">Все новинки</a>
+  </div>
+
+  <div class="news">
+    <h2 class="news__title">Новости</h2>
+    <ul class="news__list">
+      <li class="news__item">
+        <a href="#" class="news__link">
+          <img src="../img/coffe-machine.jpg" alt="news photo" class="news__img">
+          <div class="news__text">
+            <span class="news__text-date">21 Августа 2015</span>
+            <span class="news__text-descr">Новые кофемашины в нашем каталоге</span>
+          </div>
+        </a>
+      </li>
+      <li class="news__item">
+        <a href="#" class="news__link">
+          <img src="../img/coffe-machine.jpg" alt="news photo" class="news__img">
+          <div class="news__text">
+            <span class="news__text-date">21 Августа 2015</span>
+            <span class="news__text-descr">Новые кофемашины в нашем каталоге</span>
+          </div>
+        </a>
+      </li>
+      <li class="news__item">
+        <a href="#" class="news__link">
+          <img src="../img/coffe-machine.jpg" alt="news photo" class="news__img">
+          <div class="news__text">
+            <span class="news__text-date">21 Августа 2015</span>
+            <span class="news__text-descr">Новые кофемашины в нашем каталоге</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="news-all__link">Все новости</a>
+  </div>
+</div>
+
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <nav class="nav">
+  <div class="container">
+    <button class="cross"></button>
+    <div class="nav__icons">
+      <svg>
+        <use xlink:href="img/sprite.svg#account"></use>
+      </svg>
+      <svg>
+        <use xlink:href="img/sprite.svg#favourite"></use>
+      </svg>
+      <svg>
+        <use xlink:href="img/sprite.svg#compare"></use>
+      </svg>
+      <svg>
+        <use xlink:href="img/sprite.svg#search"></use>
+      </svg>
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item">Главная</li>
+      <li class="nav__item">О компании</li>
+      <li class="nav__item">Услуги</li>
+      <li class="nav__item">Каталог</li>
+      <li class="nav__item">Новости</li>
+      <li class="nav__item">Фотогалерея</li>
+      <li class="nav__item">Вопрос-ответ</li>
+      <li class="nav__item">Контакты</li>
+    </ul>
+    <div class="nav__contacts">
+        <a href="tel:+74959876543" class="nav__contacts-link">+7 495 987-65-43</a>
+        <button class="btn-reset nav__contacts-btn">Заказать звонок</button>
+        <span class="nav__contacts-address">г. Москва, </span>
+      <br>
+        <a href="mailto:mail@zasaitami.ru" class="nav__contacts-mail">test@mail.ru</a>
+    </div>
+
+    <ul class="nav__social social">
+      <li class="social__item social-telegram"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#telegram"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-ok"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-vk"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#vk"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-insta"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#insta"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-youtube"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#youtube"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-whatsapp"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#whatsapp"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-tiktok"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#tik-tok"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-twitter"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#twitter"></use>
+        </svg>
+      </a></li>
+      <li class="social__item social-fb"><a href="#" class="social__link">
+        <svg>
+          <use xlink:href="img/sprite.svg#facebook"></use>
+        </svg>
+      </a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="footer__contacts">
+      <ul class="footer__social social">
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#ok"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#insta"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#youtube"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#whatsapp"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#tik-tok"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#twitter"></use>
+          </svg>
+        </a></li>
+        <li class="social__item"><a href="#" class="social__link">
+          <svg>
+            <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a></li>
+      </ul>
+      <div class="footer__buttons">
+        <button class="btn-reset footer-btn"></button>
+        <button class="btn-reset footer-btn"></button>
+        <button class="btn-reset footer-btn"></button>
+      </div>
+      <div class="footer__create-site create-site">
+        <img src="../img/create-site.png" alt="create site photo">
+      </div>
+      <div class="footer__contact contact">
+        <a href="#" class="contact__tel contact__link">+7 495 987-65-43</a>
+        <a href="" class="contact__address contact__link">г. Москва
+         </a>
+        <a href="" class="contact__mail contact__link">test@mail.ru</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div class="form-container">
+  <form class="form">
+    <button class="cross"></button>
+    <h2 class="form__title">Заказать звонок</h2>
+    <input type="text" placeholder="Ваше имя" class="form__name">
+    <input type="text" placeholder="Ваш телефон" class="form__tel">
+    <input type="text" placeholder="В какое время вам позвонить?" class="form__time">
+    <textarea name="" id="" maxlength="100" placeholder="Комментарий" class="form__comment"></textarea>
+    <button class="btn-reset form__btn" type="submit">Отправить</button>
+    <label class="checkbox">
+      <input type="checkbox" class="checkbox__custom">
+      <span class="checkbox__text">Нажимая кнопку «отправить», я соглашаюсь на обработку моей персональной информации на условиях,
+            определенных <a href="#">Политикой конфиденциальности</a>и с политикой в отношении обработки персональных данных.
+          </span>
+    </label>
+  </form>
+</div>
+
+<!--  <script src="js/vendor.js"></script>-->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
